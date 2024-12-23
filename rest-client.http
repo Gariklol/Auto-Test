@@ -1,0 +1,31 @@
+@baseUrl = https://jsonplaceholder.typicode.com
+
+### GET all posts
+GET {{baseUrl}}/posts
+
+### GET post with id 1
+GET {{baseUrl}}/posts/1
+
+### POST new post
+POST {{baseUrl}}/posts
+Content-Type: application/json
+
+{
+    "title": "Test Post",
+    "body": "This is a test post.",
+    "userId": 1
+}
+
+### PUT existing post
+PUT {{baseUrl}}/posts/1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "title": "Updated Post",
+    "body": "This is an updated post.",
+    "userId": 1
+}
+
+### DELETE post
+DELETE {{baseUrl}}/posts/1
